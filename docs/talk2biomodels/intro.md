@@ -5,7 +5,7 @@
 ![Talk2BioModels](../assets/t2b_diagram.png)
 
 ### What can Talk2Biomodels do?
-✅ Interact with biological ODE models using natural language <br>
+✅ Interact with biological ODE models using natural language - just follow a simple prompt syntax <br>
 ✅ Upload or fetch SBML models directly from BioModels database <br>
 ✅ Run forward simulations <br>
 ✅ Visualize and explore simulation results through interactive plots and Q&A <br>
