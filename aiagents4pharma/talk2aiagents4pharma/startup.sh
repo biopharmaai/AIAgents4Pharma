@@ -172,7 +172,7 @@ if [ "$GPU_TYPE" = "nvidia" ]; then
 services:
   talk2aiagents4pharma:
     platform: linux/amd64
-    image: virtualpatientengine/talk2aiagents4pharma:latest
+    image: vpatientengine/talk2aiagents4pharma:latest
     container_name: talk2aiagents4pharma
     ports:
       - "8501:8501"

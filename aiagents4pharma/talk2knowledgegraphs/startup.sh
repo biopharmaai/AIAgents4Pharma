@@ -173,7 +173,7 @@ if [ "$GPU_TYPE" = "nvidia" ]; then
 services:
   talk2knowledgegraphs:
     platform: linux/amd64
-    image: virtualpatientengine/talk2knowledgegraphs:latest
+    image: vpatientengine/talk2knowledgegraphs:latest
     container_name: talk2knowledgegraphs
     ports:
       - "8501:8501"
