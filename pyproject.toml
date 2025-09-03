@@ -83,6 +83,7 @@ dependencies = [
   "datasets==4.0.0",
   "beautifulsoup4==4.13.4",
   "cloudscraper==1.2.71",
+  "azure-identity==1.24.0",
 ]
 version = "0.0.0"
 
