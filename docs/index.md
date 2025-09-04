@@ -9,7 +9,7 @@
 <!--  Deployment Workflows -->
 
 [![Pages Deployment](https://github.com/VirtualPatientEngine/AIAgents4Pharma/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/VirtualPatientEngine/AIAgents4Pharma/actions/workflows/pages/pages-build-deployment)
-[![MkDocs Deploy](https://github.com/VirtualPatientEngine/AIAgents4Pharma/actions/workflows/mkdocs-deploy.yml/badge.svg)](https://github.com/VirtualPatientEngine/AIAgents4Pharma/actions/workflows/mkdocs-deploy.yml)
+[![MkDocs Deploy](https://github.com/VirtualPatientEngine/AIAgents4Pharma/actions/workflows/mkdocs_deploy.yml/badge.svg)](https://github.com/VirtualPatientEngine/AIAgents4Pharma/actions/workflows/mkdocs_deploy.yml)
 [![Docker Build & Push](https://github.com/VirtualPatientEngine/AIAgents4Pharma/actions/workflows/docker_build.yml/badge.svg)](https://github.com/VirtualPatientEngine/AIAgents4Pharma/actions/workflows/docker_build.yml)
 [![Docker Compose Release](https://github.com/VirtualPatientEngine/AIAgents4Pharma/actions/workflows/docker_compose_release.yml/badge.svg)](https://github.com/VirtualPatientEngine/AIAgents4Pharma/actions/workflows/docker_compose_release.yml)
 
@@ -103,6 +103,14 @@ export LANGCHAIN_API_KEY=...        # Optional for all agents
 
 4. **Launch the app:**
 
+> System Dependency: libmagic (for secure uploads)
+> For accurate file MIME-type detection used by our secure upload validation, install the libmagic system library. This is recommended across all providers (OpenAI, Azure OpenAI, NVIDIA) because it runs locally in the Streamlit apps.
+>
+> - Linux (Debian/Ubuntu): `sudo apt-get install libmagic1`
+> - macOS (Homebrew): `brew install libmagic`
+> - Windows: Use the `python-magic`/`python-magic-bin` package; libmagic is bundled
+>   If libmagic is not available, the apps fall back to extension-based detection. For best security, keep libmagic installed.
+
 **Option A: Using UV (recommended)**
 
 ```sh
@@ -175,6 +183,7 @@ For contributors and developers, we have comprehensive documentation:
 - **[SonarCloud Integration](developer/SONARCLOUD_SETUP.md)** - Code quality analysis and CI/CD integration
 - **[GitHub Workflows](developer/WORKFLOWS.md)** - Understanding our CI/CD pipeline
 - **[Streamlit Security](developer/STREAMLIT_SECURITY.md)** - File upload security implementation
+- **[Azure Deployment](developer/AZURE_DEPLOYMENT.md)** - Understanding our Azure deployment setup
 
 #### How to contribute
 

@@ -60,7 +60,6 @@ dependencies = [
   "pylint==3.3.1",
   "pymilvus==2.5.11",
   "pypdf==6.0.0",
-  "PyPDF2==3.0.1",
   "pytest==8.3.3",
   "pytest-asyncio==0.25.2",
   "pyzotero==1.6.9",
@@ -84,6 +83,7 @@ dependencies = [
   "datasets==4.0.0",
   "beautifulsoup4==4.13.4",
   "cloudscraper==1.2.71",
+  "azure-identity==1.24.0",
 ]
 version = "0.0.0"
 
