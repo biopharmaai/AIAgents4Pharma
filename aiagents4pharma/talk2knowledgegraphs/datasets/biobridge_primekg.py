@@ -161,10 +161,7 @@ class BioBridgePrimeKG(Dataset):
         processed_file_path = os.path.join(self.local_dir, "embeddings", "embedding_dict.pkl")
         if os.path.exists(processed_file_path):
             # Load the embeddings from the local directory
-            try:
-                emb_dict_all = joblib.load(processed_file_path)
-            except Exception as e:
-                raise RuntimeError("Failed to load embedding data securely") from e
+            emb_dict_all = joblib.load(processed_file_path)
         else:
             # Download the embeddings from the BioBridge repo and further process them
             # List of embedding source files
@@ -185,10 +182,7 @@ class BioBridgePrimeKG(Dataset):
             # Unified embeddings
             emb_dict_all = {}
             for file in file_list:
-                try:
-                    emb = joblib.load(os.path.join(self.local_dir, "embeddings", file))
-                except Exception as e:
-                    raise RuntimeError(f"Failed to load embedding file {file} securely") from e
+                emb = joblib.load(os.path.join(self.local_dir, "embeddings", file))
                 emb_ar = emb["embedding"]
                 if not isinstance(emb_ar, list):
                     emb_ar = emb_ar.tolist()

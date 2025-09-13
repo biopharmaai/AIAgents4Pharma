@@ -110,12 +110,9 @@ class StarkQAPrimeKG(Dataset):
             )
 
         # Load the node info of PrimeKG preprocessed for StarkQA
-        try:
-            starkqa_node_info = joblib.load(
-                os.path.join(self.local_dir, "skb/prime/processed/node_info.pkl")
-            )
-        except Exception as e:
-            raise RuntimeError("Failed to load StarkQA node info securely") from e
+        starkqa_node_info = joblib.load(
+            os.path.join(self.local_dir, "skb/prime/processed/node_info.pkl")
+        )
 
         return starkqa, starkqa_split_idx, starkqa_node_info
 

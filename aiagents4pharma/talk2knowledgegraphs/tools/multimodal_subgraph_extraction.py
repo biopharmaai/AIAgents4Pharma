@@ -320,12 +320,8 @@ class MultimodalSubgraphExtractionTool(BaseTool):
         # logger.log(logging.INFO, "Source graph: %s", source_graph)
 
         # Load the knowledge graph using secure joblib
-        try:
-            initial_graph["pyg"] = joblib.load(initial_graph["source"]["kg_pyg_path"])
-            initial_graph["text"] = joblib.load(initial_graph["source"]["kg_text_path"])
-        except Exception as e:
-            logger.error("Failed to load graph data securely")
-            raise RuntimeError("Graph data loading failed") from e
+        initial_graph["pyg"] = joblib.load(initial_graph["source"]["kg_pyg_path"])
+        initial_graph["text"] = joblib.load(initial_graph["source"]["kg_text_path"])
 
         # Prepare the query embeddings and modalities
         query_df = self._prepare_query_modalities(
