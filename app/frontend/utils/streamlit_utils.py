@@ -1525,6 +1525,8 @@ def help_button():
 
 **Video**
 - [Watch the app overview](https://www.youtube.com/watch?v=3cU_OxY4HiE)
+
+[![Watch the app overview](https://img.youtube.com/vi/3cU_OxY4HiE/0.jpg)](https://www.youtube.com/watch?v=3cU_OxY4HiE)
 """
     )
 
