@@ -85,7 +85,7 @@ dependencies = [
   "cloudscraper==1.2.71",
   "azure-identity==1.25.0",
 ]
-version = "1.49.1"
+version = "1.1.0"
 
 [project.optional-dependencies]
 dev = [
